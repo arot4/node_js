@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Clientes</title>
+</head>
+<body>
+    <h1>Catalogo de Clientes</h1>
+
+    <a href="/cp">Productos</a> 
+    <a href="/cu">Usuarios</a> 
+    <a href="/cc">Clientes</a>
+
+    <table border="1">
+        <tr><th>Id usuario</th><th>Nombre usuario</th><th>Primer apellido</th><th>Segundo apellido</th></tr>
+        <% clientes.forEach(cliente => { %> 
+            <tr><td><%= cliente.id %></td>
+                <td><%= cliente.nombre %></td>
+                <td><%= cliente.apellido %></td>
+                <td><%= cliente.email %></td></tr>
+        <% }); %>
+    </table>
+    
+</body>
+</html>

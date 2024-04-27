@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catalogo de Productos</h1>
+
+    <a href="/cp">Productos</a> 
+    <a href="/cu">Usuarios</a> 
+    <a href="/cc">Clientes</a>
+
+    <table border="1">
+        <tr><th>Codigo del Producto</th><th>Nombre del Producto</th><th>Precio del Producto</th></tr>
+        <% productos.forEach(producto => { %> 
+            <tr><td><%= producto.codigo %></td><td><%= producto.nombre %></td><td>$<%= producto.precio %></td></tr>
+        <% }); %>
+    </table>
+
+</body>
+</html>
